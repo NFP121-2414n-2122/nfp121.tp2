@@ -1,7 +1,7 @@
 package question2;
 
 
-/**
+/*
  * Classe-test FahrenheitCelsiusTest.
  *
  * @author  (votre nom)
@@ -33,7 +33,7 @@ public class FahrenheitCelsiusTest extends junit.framework.TestCase
     // Notez cependant que ce dernier ne peut saisir les objets primitifs
     // du présentoir (les objets sans constructeur, comme int, float, etc.).
 
-    /**
+    /*
      * Constructeur de la classe-test FahrenheitCelsiusTest
      */
     public FahrenheitCelsiusTest()
@@ -50,8 +50,8 @@ public class FahrenheitCelsiusTest extends junit.framework.TestCase
         // Initialisez ici vos engagements
 
     }
-
-    /**
+    
+    /*
      * Supprime les engagements
      *
      * Méthode appelée après chaque appel de méthode de test.
@@ -61,12 +61,22 @@ public class FahrenheitCelsiusTest extends junit.framework.TestCase
         //Libérez ici les ressources engagées par setUp()
     }
 
-    /**
+    /*
      * Il ne vous reste plus qu'à définir une ou plusieurs méthodes de test.
      * Ces méthodes doivent vérifier les résultats attendus à l'aide d'assertions
      * assertTrue(<boolean>).
      * Par convention, leurs noms devraient débuter par "test".
      * Vous pouvez ébaucher le corps grâce au menu contextuel "Enregistrer une méthode de test".
      */
+    String error="error";
 
+ public void test_fahrenheitEnCelsius() {
+        assertEquals("    0 °F -> -17.7 °C ? ", -17.7, question1.FahrenheitCelsius.fahrenheitEnCelsius(0), 0.1);
+        assertEquals("    60 °F -> 15.5 °C ? ", 15.5, question1.FahrenheitCelsius.fahrenheitEnCelsius(60), 0.1);
+        assertEquals("  100 °F -> 37.7 °C ? ", 37.7, question1.FahrenheitCelsius.fahrenheitEnCelsius(100), 0.1);
+        assertEquals(" 2000 °F -> 1093.3 °C ?", 1093.3, question1.FahrenheitCelsius.fahrenheitEnCelsius(2000), 0.1);
+        assertEquals("   54 °F -> 12.2 °C ?", 12.2, question1.FahrenheitCelsius.fahrenheitEnCelsius(54), 0.1);
+
+        
+    }
 }
